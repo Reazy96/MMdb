@@ -10,19 +10,6 @@ function findById(id) {
   return getDb().then((db) => db.collection("movieDetails").findOne({ _id: idAsObjectId }));
 }
 
-// const findAllFavorited = () => {
-//   return getDb()
-//     .then((db) => db.collection("favorites").find().toArray()) // [{ _id: favid , movieID: movieID}]
-//     .then((favoritesDocs) => favoritesDocs.map((item) => item.movieID)) // [ObjectId,...]
-//     .then((favIds) => Promise.all([getDb(), favIds]))
-//     .then(([db, favIds]) =>
-//       db
-//         .collection("movieDetails")
-//         .find({ _id: { $in: favIds } })
-//         .toArray()
-//     );
-// };
-
 function createOne(documentInfo) {
   return getDb()
     .then((db) => db.collection("movieDetails").insertOne(documentInfo)) // { acknowledged: true, insertedId: ObjectId("...") }
@@ -46,4 +33,4 @@ function deleteOne(id) {
   return getDb().then((db) => db.collection("movieDetails").findOneAndDelete({ _id: idAsObjectId }));
 }
 
-export const moviesDAO = { findAll, findById, findAllFavorited, createOne, updateOne, deleteOne };
+export const moviesDAO = { findAll, findById, createOne, updateOne, deleteOne };

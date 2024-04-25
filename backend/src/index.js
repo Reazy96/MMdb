@@ -51,6 +51,7 @@ app.post("/api/v1/movies", (req, res) => {
 app.patch("/api/v1/movies/:movieId", (req, res) => {
   const movieId = req.params.movieId;
   const updateInfo = req.body;
+
   moviesDAO
     .updateOne(movieId, updateInfo)
     .then((updatedMovie) => res.json(updatedMovie || {}))
@@ -108,26 +109,3 @@ app.delete("/api/v1/favorites/:favId", (req, res) => {
 
 const PORT = 2323;
 app.listen(PORT, () => console.log(`Server ready at http://localhost:${PORT}`));
-
-// fetche alle favos
-
-// id`s in ein array
-
-//
-// ids=[   327342734734773
-//   442373247324783 327342734734773
-//   442373247324783 327342734734773
-//   442373247324783 327342734734773
-//   442373247324783 327342734734773
-//   442373247324783   ]
-
-// mape ich die id's
-
-// save,setsave=usestate
-
-// uds.map((item)=>{
-//   useeffect
-// fetch:/api/v1/movies/item
-// setsave(data)
-
-// })

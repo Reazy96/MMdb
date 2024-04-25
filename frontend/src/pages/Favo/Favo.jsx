@@ -38,7 +38,7 @@ const Favo = () => {
     <section>
       <h2>Your Favos</h2>
       {idS.map((item, index) => (
-        <div key={index} style={{ display: "flex", justifyContent: "space-between", gap: "10px" }}>
+        <div key={index}>
           <p>{item.title}</p>
           <button onClick={() => deleteFavo(saveFetch[index]._id)}>❌</button>
         </div>

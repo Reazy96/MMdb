@@ -1,4 +1,5 @@
 import "./App.css";
+import Detail from "./pages/Detail/Detail";
 import Favo from "./pages/Favo/Favo";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -9,7 +10,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/favo/" element={<Favo />} />
+          <Route path="/favo" element={<Favo />} />
+
+          <Route path="/detail/:movieId" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </>

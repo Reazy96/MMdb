@@ -1,0 +1,106 @@
+.home-header {
+  background-image: url(../../../public/moviemagic\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.home-header nav .home-logo {
+  display: flex;
+  align-items: center;
+}
+
+.home-header nav .home-logo h1 {
+  font-size: 60px;
+  margin: 0;
+  color: #2a9d8f;
+}
+
+.home-header nav .home-logo h2 {
+  font-size: 70px;
+  margin-left: 65px;
+}
+
+.home-search {
+  display: flex;
+  gap: 30px;
+}
+
+.home-search input {
+  border-radius: 30px;
+  border: 2px solid #2a9d8f;
+  background-color: transparent;
+  font-size: 20px;
+  padding-inline: 7px;
+}
+
+.home-search button {
+  border-radius: 30px;
+  background-color: #2a9d8f;
+}
+
+.home-header nav a {
+  color: #2a9d8f;
+  font-size: 20px;
+}
+
+.home-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.home-main {
+  padding-inline: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-card {
+  border: 1px solid #2a9d8f;
+  padding: 20px;
+  max-width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.home-card img {
+  border-radius: 30px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-block: 50px;
+}
+
+.home-btn {
+  margin-block: 30px;
+}
